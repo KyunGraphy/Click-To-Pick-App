@@ -5,6 +5,7 @@ const MainLayout = ({ children }) => {
   return (
     <div>
       <NavBar />
+      <div className='h-16'></div>
       {children}
     </div>
   )

@@ -7,6 +7,7 @@ import ChatPage from "./pages/chat/Chat.jsx";
 import NotificationPage from "./pages/notification/Notification.jsx";
 import ProfilePage from "./pages/profile/Profile.jsx";
 import Login from './pages/auth/Login';
+import Register from './pages/auth/Register';
 import MainLayout from "./layouts/MainLayout.jsx";
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           </MainLayout>} />
 
         <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
       </Routes>
     </div>
   );

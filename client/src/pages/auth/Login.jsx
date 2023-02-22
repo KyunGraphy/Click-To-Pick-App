@@ -23,7 +23,7 @@ const Login = () => {
           autoComplete="off"
         >
           <TextField id="standard-basic" label="Username" variant="standard" color="success" required /><br />
-          <TextField id="standard-basic" label="Password" variant="standard" color="success" required />
+          <TextField id="standard-basic" type='password' label="Password" variant="standard" color="success" required />
         </Box>
         <Stack spacing={2} direction="row">
           <Button variant="contained" color="success" className='w-full'>LOGIN</Button>

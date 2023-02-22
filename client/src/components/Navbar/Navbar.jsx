@@ -2,7 +2,7 @@ import './Navbar.css'
 import React, { useState } from 'react'
 import { AiOutlineMessage, AiFillMessage } from 'react-icons/ai';
 import { BsPeople, BsPeopleFill } from "react-icons/bs";
-import { HiShoppingCart, HiOutlineShoppingCart } from "react-icons/hi";
+import { IoNewspaper, IoNewspaperOutline } from "react-icons/io5";
 import { IoIosNotifications, IoIosNotificationsOutline } from "react-icons/io";
 import { RiCompassDiscoverFill, RiCompassDiscoverLine } from "react-icons/ri";
 import { SiBamboo } from "react-icons/si";
@@ -13,19 +13,19 @@ const NavBar = () => {
   const [user, setUser] = useState('');
 
   return (
-    <div className='drop-shadow-xl px-3 h-16 flex justify-around shadow-2xl bg-lime-500'>
+    <div className='fixed z-50 drop-shadow-xl w-screen px-3 h-16 flex justify-around shadow-2xl bg-lime-500'>
       <Link to='/' className='logo text-white text-5xl w-32 cursor-pointer'>
         <SiBamboo />
       </Link>
       <div className='flex'>
         {option === 0 ? (
           <span className='option-active text-lime-500'>
-            <HiShoppingCart className='option-item option-item-active' />
+            <IoNewspaper className='option-item option-item-active' />
           </span>
         ) : (
           <Link to='/'>
             <span className='option' onClick={() => setOption(0)}>
-              <HiOutlineShoppingCart className='option-item' />
+              <IoNewspaperOutline className='option-item' />
             </span>
           </Link>
         )}
@@ -84,9 +84,9 @@ const NavBar = () => {
             <Link to='/login' className='navbar-button'>
               <p className='navbar-button-text text-lime-500'>Sign In</p>
             </Link>
-            <span className='navbar-button'>
+            <Link to='/register' className='navbar-button'>
               <p className='navbar-button-text text-lime-500'>Sign Up</p>
-            </span>
+            </Link>
           </>
         )}
       </div>
