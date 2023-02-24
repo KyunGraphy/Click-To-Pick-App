@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import { IoCartSharp, IoLocationSharp, IoPricetag } from "react-icons/io5";
 import { BsBookmarkHeartFill, BsCalendarDateFill, BsFillPersonCheckFill, BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
-import { FaShare } from "react-icons/fa";
+import { FaRegCommentAlt, FaShare } from "react-icons/fa";
+import { AiFillLike } from "react-icons/ai";
+
+import './Post.css'
 
 const content = `Extracted from ingredients of natural origin, the Hazeline product line is completely suitable for the skin, protects the skin from the sun and balances the pH. Besides, the essence from the fruit will help you have smooth and healthy skin.`;
 
@@ -74,6 +77,24 @@ const Post = () => {
           alt=''
           src='http://cdn.tgdd.vn/Files/2017/10/15/1033190/sua-rua-mat-tot-cho-da-chua-toi-30-ngan-202110271122182655.jpg'
         />
+      </div>
+      <div className='post_options flex pt-2 border-t-4 border-lime-400 justify-evenly text-lg text-lime-700 p-4'>
+        <div style={{alignItems: 'center'}} className='post_option flex flex-1 justify-center p-1 cursor-pointer'>
+          <AiFillLike />
+          <p className='ml-3'>Like</p>
+        </div>
+        <div style={{alignItems: 'center'}} className='post_option flex flex-1 justify-center p-1 cursor-pointer'>
+          <FaRegCommentAlt />
+          <p className='ml-3'>Comments</p>
+        </div>
+        <div style={{alignItems: 'center'}} className='post_option flex flex-1 justify-center p-1 cursor-pointer'>
+          <FaShare />
+          <p className='ml-3'>Share</p>
+        </div>
+        <div style={{alignItems: 'center'}} className='post_option flex flex-1 justify-center p-1 cursor-pointer'>
+          <BsBookmarkHeartFill />
+          <p className='ml-3'>Interested</p>
+        </div>
       </div>
     </div>
   )
